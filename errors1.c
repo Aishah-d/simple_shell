@@ -1,7 +1,5 @@
 #include "shell.h"
-
 static int write_buffer(char c, int fd, char *buf, int *i);
-
 /**
  * _eputs - prints an input string to stderr
  * @str: the string to be printed
@@ -19,7 +17,6 @@ void _eputs(char *str)
         str++;
     }
 }
-
 /**
  * _eputchar - writes the character c to stderr
  * @c: The character to print
@@ -34,7 +31,6 @@ int _eputchar(char c)
 
     return write_buffer(c, 2, buf, &i);
 }
-
 /**
  * _putfd - writes the character c to the given file descriptor
  * @c: The character to print
@@ -50,7 +46,6 @@ int _putfd(char c, int fd)
 
     return write_buffer(c, fd, buf, &i);
 }
-
 /**
  * _putsfd - prints an input string to the specified file descriptor
  * @str: the string to be printed
@@ -73,7 +68,6 @@ int _putsfd(char *str, int fd)
 
     return count;
 }
-
 /**
  * write_buffer - helper function to write characters to a buffer
  * @c: The character to print
